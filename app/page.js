@@ -1,69 +1,68 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="container">
+      <section className="hero">
+        <p className="tagline">SMARTER BUSINESS DISCOVERY</p>
+
+        <h1>
+          Find the Right Customers
+          <br />
+          and Investors
+        </h1>
+
+        <p className="hero-text">
+          Discover business opportunities and connect
+          with the right people to grow your startup.
+        </p>
+
+        <div className="hero-buttons">
+          <Link href="/customers" className="btn">
+            Find Customers
+          </Link>
+
+          <Link href="/investors" className="btn secondary">
+            Find Investors
+          </Link>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="features">
+        <h2>What Can You Discover?</h2>
+
+        <div className="feature-grid">
+          <div className="feature-card">
+            <h3>Customer Discovery</h3>
+            <p>
+              Find potential companies interested
+              in your products and services.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Investor Discovery</h3>
+            <p>
+              Find investors suitable for your startup.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Smart Matching</h3>
+            <p>
+              Understand why a company or investor
+              matches your requirements.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Personalized Outreach</h3>
+            <p>
+              Prepare sample messages for potential connections.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
